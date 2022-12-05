@@ -5,14 +5,17 @@
 # if the builders don't have a sufficient number of blocks and cannot complete the next layer,
 # they finish their work immediately.
 
-b = int(input("Number of blocks. please: "))
 bu = 0 # block used per level
 l = 0 # number of levels
-while (b - bu) > 0: # if blocks number - blocks used  more than zero (means we have enough blocks for next level)
-    bu += 1 # each level requires one more block
-    b -= bu # each level requires blocks
-    l += 1 # levels count
-else:
-    print("Wow it's antimaterial") # in case of negative blocks
+b = int(input("Number of blocks. please: "))
+
+if b < 0:
+    print("No it's antimaterial")
+
+elif b > 0:
+    while (b - bu) > 0: # if blocks number - blocks used  more than zero (means we have enough blocks for next level)
+      bu += 1 # each level requires one more block
+      b -= bu # each level requires blocks
+      l += 1 # levels count
 
 print(l)

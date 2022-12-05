@@ -13,6 +13,6 @@ while (b - bu) > 0: # if blocks number - blocks used  more than zero (means we h
     b -= bu # each level requires blocks
     l += 1 # levels count
 else:
-    print("Wow it's antimaterial")
+    print("Wow it's antimaterial") # in case of negative blocks
 
 print(l)

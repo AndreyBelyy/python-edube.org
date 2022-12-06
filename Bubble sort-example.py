@@ -34,10 +34,50 @@ while swapped:
 print(my_list)
 
 
+my_list = []
+swapped = True
+num = int(input("How many elements do you want to sort: "))
+
+for i in range(num):
+    val = float(input("Enter a list element: "))
+    my_list.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
+            swapped = True
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+print("\nSorted:")
+print(my_list)
 
 
 
 
+
+
+# repetition
+
+numbers = []
+swapped = True
+num = int(input("Quantity of numbers: "))
+
+for i in range(num):
+    val = int(input("Numbers, please: "))
+    numbers.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(numbers) - 1):
+        if numbers[i] > numbers[i + 1]:
+            swapped = True
+            numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+print(numbers)
+
+easy = [9, 199, 1876, 1220]
+easy.sort()
+print(easy)
 
 
 

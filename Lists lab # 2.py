@@ -13,8 +13,9 @@
 
 # step 5: use the insert() method to add Ringo Starr to the beginning of the list.
 
-beatles = []
+
 # step 1
+beatles = []
 print("Step 1:", beatles)
 
 # step 2

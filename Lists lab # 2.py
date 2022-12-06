@@ -19,21 +19,19 @@ beatles = []
 print("Step 1:", beatles)
 
 # step 2
-print("Step 2:", beatles)
 beatles.append("John Lennon")
 beatles.append("Paul McCartney")
 beatles.append("George Harrison")
+print("Step 2:", beatles)
 
 # step 3
-print("Step 3:", beatles)
-
 for i in range(2):
     beatles.append(input("Names, please: "))
-
+print("Step 3:", beatles)
 
 # step 4
-print("Step 4:", beatles)
 del beatles[3:5]
+print("Step 4:", beatles)
 
 # step 5
 beatles.insert(0, "Ringo Starr")

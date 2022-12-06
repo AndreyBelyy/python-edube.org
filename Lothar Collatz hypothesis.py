@@ -21,7 +21,6 @@ while n != 1:
         steps += 1 # add count to step
         print(int(n))
     else: # if number is odd
-        #n % 3 == 0:
         n = 3 * n + 1
         steps += 1
         print(int(n))

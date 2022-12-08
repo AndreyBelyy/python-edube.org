@@ -16,5 +16,17 @@ def awards(category, *persons):
     """Give awards"""
     for person in persons:
         print("Senor " + person.title() + " nagrajdaetsia award "+ category)
-awards("Hours working", "Ilia", "Petr")
+awards("Hours working", "Ilia", "Petr","D", "W")
 awards("For Love & Care", "galina", "Aleksandr")
+
+
+def strange_list_fun(n):
+    strange_list = []
+
+    for i in range(0, n):
+        strange_list.insert(0, i)
+
+    return strange_list
+
+
+print(strange_list_fun(584))

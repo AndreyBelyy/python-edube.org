@@ -2,7 +2,8 @@
 # and returns True if the year is a leap year, or False otherwise.
 year = int(input("Year, please: "))
 month = int(input("Month, please: "))
-
+day = int(input("Day, please: "))
+lm = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 def is_year_leap(year):
     if year % 4 == 0:
@@ -24,7 +25,6 @@ vys_year = is_year_leap(year)
 # Now, convince the function to return None if its arguments don't make sense.
 
 def days_in_month(year, month):
-    lm = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     if year < 1582 or month < 1 or month > 12:
         return None
     if month == 2 and vys_year == True:
@@ -34,4 +34,13 @@ def days_in_month(year, month):
     return year, month
 
 
-print(days_in_month(year, month))
+#print(days_in_month(year, month))
+
+def what_num_of_day(year, month, day):
+    days = 0
+    for x in range(month-1):
+        days += lm[x]
+    days += day
+    return days
+
+print(what_num_of_day(year, month, day))

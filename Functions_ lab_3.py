@@ -8,7 +8,7 @@ m_km = 1.609344
 l_g = 3.785411784
 
 def liters_100km_to_miles_gallon(liters):
-    mpg = (100/ m_km) / (liters/ l_g)
+    mpg = (100 / m_km) / (liters / l_g)
     return mpg
 def miles_gallon_to_liters_100km(miles):
     kml = 100 / ((miles * m_km) / l_g)

@@ -46,7 +46,6 @@ def enter_move(rc1):
 
     return rc1
 
-
 def make_list_of_free_fields(rc1):
     # The function browses the board and builds a list of all the free squares;
     # the list consists of tuples, while each tuple is a pair of row and column numbers.
@@ -54,7 +53,6 @@ def make_list_of_free_fields(rc1):
     free_board_2 = []
     global c
     c = 9
-
 
     for z in rc1:
         for w in range(len(z)):
@@ -130,9 +128,6 @@ def draw_move(board):
         new_list = [x for x in all_squares if x not in moves] # makes a new list without ocuppied squares
         cm = random.choice(new_list)                          # picks random number
         moves.append(cm)
-
-
-
 
     print("+++<", moves, ">+++")
 

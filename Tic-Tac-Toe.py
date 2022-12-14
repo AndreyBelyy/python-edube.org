@@ -127,8 +127,8 @@ def draw_move(board):
     elif cm in moves:
 
         all_squares = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        new_list = [x for x in all_squares if x not in moves]
-        cm = random.choice(new_list)
+        new_list = [x for x in all_squares if x not in moves] # makes a new list without ocuppied squares
+        cm = random.choice(new_list)                          # picks random number
         moves.append(cm)
 
 

@@ -26,12 +26,11 @@ def enter_move(rc1):
     # checks the input, and updates the board according to the user's decision.
     try:
         hm = int(input("Enter you move : "))
-
-        if hm > 0 and 10 > hm  and hm != '' and hm in moves:                      # Check if same move already made by user
-           hm = int(input("Another number, please: "))
-           moves.append(hm)
-        else:
-             moves.append(hm)
+        if 0 > hm or hm > 9 or hm in moves:
+            hm = int(input("Another number, please: "))
+            moves.append(hm)
+        elif 0 < hm < 9 and hm not in moves:
+            moves.append(hm)
     except ValueError:
         hm = int(input("Enter you move : "))
     except:
